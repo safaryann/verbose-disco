@@ -7,7 +7,35 @@
         mc:Ignorable="d"
         Title="Авторизация" Height="500" Width="800" MinHeight="500" MinWidth="800" MaxHeight="700" MaxWidth="1000" WindowStartupLocation="CenterScreen">
     <Grid Height="484" VerticalAlignment="Center" HorizontalAlignment="Left" Width="800">
-        <TextBox Margin="152,200,0,0"  HorizontalAlignment="Left" Width="468" Height="25" VerticalAlignment="Top"/>
-        <PasswordBox Margin="152,254,0,0" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Width="468"/>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top"  Orientation="Horizontal" Height="100">
+            </StackPanel>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="400"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Content="Логин" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FF698AFF" FontFamily="Arial"/>
+                <Label Content="Пароль" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="#FF698AFF" FontFamily="Arial"/>
+                <TextBox  Grid.Column="1" Grid.Row="1" x:Name="Login" VerticalAlignment="Center"/>
+                <PasswordBox  Grid.Column="1" x:Name="Password" Grid.Row="2" VerticalAlignment="Center" />
+                <Button Content="Войти" Click="Login_Click" Grid.Column="1" Grid.Row="3" Width="200" Background="#FF698AFF" Foreground="WhiteSmoke" FontFamily="Arial"/>
+            </Grid>
+        </DockPanel>
+        <Button Content="Войти как гость" Width="150" Height="40" FontFamily="Arial" FontSize="14" Click="SignInGuestButton_Click" Margin="625,10,13,400" Background="#FF698AFF" Foreground="WhiteSmoke">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="10"/>
+                    <Setter Property="BorderBrush" Value="AliceBlue"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

@@ -9,24 +9,24 @@
       Title="Меню">
 
     <Grid>
-        <Label Content="Пользователь" Foreground="CornflowerBlue" FontWeight="Black" FontSize="14" FontFamily="Arial" Margin="0,72,0,-72"/>
-        <Label Content="Роль" Foreground="CornflowerBlue" FontWeight="Black" FontSize="14" FontFamily="Arial" Margin="0,115,0,-115"/>
+        <Label Content="Пользователь" Foreground ="#FF698AFF" FontWeight="Black" FontSize="14" FontFamily="Arial" Margin="0,72,0,-72"/>
+        <Label Content="Роль" Foreground ="#FF698AFF" FontWeight="Black" FontSize="14" FontFamily="Arial" Margin="0,115,0,-115"/>
         <StackPanel HorizontalAlignment="Center" Width="800" Height="450" VerticalAlignment="Top">
-            <Button x:Name="CategoriesButton" Click="CategoriesButton_Click" Content="Категории товаров" Background="CornflowerBlue" FontWeight="Black"  FontSize="14" FontFamily="Arial" Height="80" Width="175" Margin="0,140,0,25">
+            <Button x:Name="CategoriesButton" Click="CategoriesButton_Click" Content="Категории товаров"  FontWeight="Black"  FontSize="13" Background="#FF698AFF" FontFamily="Arial" Height="80" Width="175" Margin="0,140,0,25">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="ProductButton" Click="ProductButton_Click" Content="Товары" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="80" Width="175" Margin="0,0,0,25">
+            <Button x:Name="ProductButton" Click="ProductButton_Click" Content="Товары"  FontSize="14"  FontFamily="Arial" Background="#FF698AFF" FontWeight="Black" Height="80" Width="175" Margin="0,0,0,25">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="ShoppingCartButton" Click="ShoppingCartButton_Click"  Content="Корзина" Background="CornflowerBlue" FontWeight="Black"  FontSize="14" FontFamily="Arial" Height="80" Width="175">
+            <Button x:Name="ShoppingCartButton" Click="ShoppingCartButton_Click"  Content="Корзина" FontWeight="Black" Background="#FF698AFF" FontSize="14" FontFamily="Arial" Height="80" Width="175">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -35,14 +35,14 @@
             </Button>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Width="800" Height="450" VerticalAlignment="Top">
-            <Button x:Name="SaleButton" Click="SaleButton_Click" Content="Скидки" Background="CornflowerBlue" FontWeight="Black"  FontSize="14" FontFamily="Arial" Height="80" Width="175" Margin="100,120,0,0">
+            <Button x:Name="SaleButton" Click="SaleButton_Click" Content="Скидки" FontWeight="Black" Background="#FF698AFF" FontSize="14" FontFamily="Arial" Height="80" Width="175" Margin="100,120,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="DeliveryButton" Click="DeliveryButton_Click"  Content="Доставка" Background="CornflowerBlue" FontWeight="Black" FontSize="14" FontFamily="Arial" Height="80" Width="175" Margin="250,120,0,0">
+            <Button x:Name="DeliveryButton" Click="DeliveryButton_Click"  Content="Доставка" FontWeight="Black" Background="#FF698AFF" FontSize="14" FontFamily="Arial" Height="80" Width="175" Margin="250,120,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -50,7 +50,7 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        <Button x:Name="LogoutButton" Click="LogoutButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Выход" Width="150" Height="45" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial">
+        <Button x:Name="LogoutButton" Click="LogoutButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Выход" Width="150" Height="45" FontWeight="Black" Background="#FF698AFF" FontSize="14"  FontFamily="Arial">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

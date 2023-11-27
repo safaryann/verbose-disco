@@ -10,35 +10,35 @@
 
     <Grid>
         <StackPanel Margin="288,164,-288,-164">
-            <Button x:Name="SearchButton" Click="SearchButton_Click" Content="Найти" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="SearchButton" Click="SearchButton_Click" Content="Найти" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="UploadButton" Click="UploadButton_Click" Content="Выгрузить" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="UploadButton" Click="UploadButton_Click" Content="Выгрузить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="UpdateButton" Click="UpdateButton_Click" Content="Обновить" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="UpdateButton" Click="UpdateButton_Click" Content="Обновить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="Удалить" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150">
+            <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="Удалить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -46,7 +46,7 @@
                 </Button.Resources>
             </Button>
         </StackPanel>
-        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="5" >
+        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="5" >
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

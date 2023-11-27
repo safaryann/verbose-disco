@@ -9,13 +9,20 @@
       Title="ShoppingCartPage">
 
     <Grid>
-        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial">
+        <DataGrid CanUserResizeColumns="False" CanUserResizeRows="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="75,82,75,10" AutoGenerateColumns="False" CanUserReorderColumns="False"  x:Name="ClientGrid" Background="White">
+            <DataGrid.Columns>
+                <DataGridTextColumn Width="30"  Header="ID" Visibility="Hidden" IsReadOnly="True"/>
+                <DataGridTextColumn  Width="*"  Header="Товар" IsReadOnly="True"/>
+                <DataGridTextColumn Width="*"  Header="Цена" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-        
+
     </Grid>
 </Page>
