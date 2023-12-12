@@ -11,9 +11,10 @@ namespace Enternet_Shop.Infrastructure
     {
         public long ID { get; set; }
 
+        [Column("adress")]
         [Required]
         [StringLength(2147483647)]
-        public string adress { get; set; }
+        public string Adress { get; set; }
 
         [Column("ID order")]
         public long ID_order { get; set; }

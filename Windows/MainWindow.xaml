@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Enternet_Shop"
         mc:Ignorable="d"
-        Title="Главное меню" Height="500" Width="800" MinHeight="500" MinWidth="800" MaxHeight="700" MaxWidth="1000" WindowStartupLocation="CenterScreen">
+        Title="Главное меню" Height="500" Width="800" MinHeight="500" MinWidth="800" WindowStartupLocation="CenterScreen">
     <Grid>
         <Frame x:Name="MainFrame" NavigationUIVisibility="Hidden" Source="/Pages/MenuPage.xaml"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Width="388" Height="80" VerticalAlignment="Top">
             <Image Source="/ARARAT.png"/>
-            <Label Content="Интернет-магазин 'Арарат'" FontSize="17"/>
+            <Label Content="Интернет-магазин 'ARARAT'" FontSize="17"/>
         </StackPanel>
     </Grid>
 </Window>

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Enternet_Shop.Infrastructure.Consts;
+using Enternet_Shop.Infrastructure.Database;
 
 namespace Enternet_Shop.Windows
 {
@@ -26,15 +28,32 @@ namespace Enternet_Shop.Windows
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            string login = LoginTextBox.Text;
+            string password = PasswordPasswordBox.Password;
 
-        }
+            var clientRepository = new ClientRepository();
+            var user = clientRepository.ValidateAndGetUser(login, password);
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
+            if (user != null)
+            {
+                Application.Current.Resources[UserInfoConsts.UserId] = user.ID;
+                Application.Current.Resources[UserInfoConsts.UserName] = user.Login;
+                Application.Current.Resources[UserInfoConsts.PostId] = user.PostId;
+                Application.Current.Resources[UserInfoConsts.Post] = user.post;
 
+                MainWindow menuWindow = new MainWindow();
+                menuWindow.Show();
+
+                Close();
+            }
         }
         private void SignInGuestButton_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Resources[UserInfoConsts.UserId] = 0;
+            Application.Current.Resources[UserInfoConsts.UserName] = "Гость";
+            Application.Current.Resources[UserInfoConsts.PostId] = 0;
+            Application.Current.Resources[UserInfoConsts.Post] = "Гость";
+
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             Close();

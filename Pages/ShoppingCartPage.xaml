@@ -9,20 +9,34 @@
       Title="ShoppingCartPage">
 
     <Grid>
-        <DataGrid CanUserResizeColumns="False" CanUserResizeRows="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="75,82,75,10" AutoGenerateColumns="False" CanUserReorderColumns="False"  x:Name="ClientGrid" Background="White">
+        <DataGrid CanUserResizeColumns="False" CanUserResizeRows="False" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="75,82,75,10" AutoGenerateColumns="False" CanUserReorderColumns="False"  x:Name="ShoppingCartDataGrid" Background="White" CanUserSortColumns="True">
             <DataGrid.Columns>
-                <DataGridTextColumn Width="30"  Header="ID" Visibility="Hidden" IsReadOnly="True"/>
-                <DataGridTextColumn  Width="*"  Header="Товар" IsReadOnly="True"/>
-                <DataGridTextColumn Width="*"  Header="Цена" IsReadOnly="True"/>
+                <DataGridTextColumn Width="30"  Header="ID" Visibility="Hidden" IsReadOnly="True" Binding="{Binding ID}" CanUserReorder="False"/>
+                <DataGridTextColumn  Width="*"  Header="Товар" IsReadOnly="True" Binding="{Binding Name}" CanUserReorder="False"/>
+                <DataGridTextColumn Width="*"  Header="Цена" IsReadOnly="True" Binding="{Binding Cost}" CanUserReorder="False"/>
+                <DataGridTextColumn Width="*"  Header="Количество" IsReadOnly="True" Binding="{Binding Quanity}" CanUserReorder="False"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial">
+        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="5">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>
                 </Style>
             </Button.Resources>
         </Button>
-
+        <Button x:Name="ClearCartButton" Click="ClearCartButton_Click" HorizontalAlignment="Right" Content="Очистить корзину" Width="180" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="0,0,10,10" Height="32" VerticalAlignment="Bottom">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="BuyButton" Click="BuyButton_Click" HorizontalAlignment="Center" Content="Купить" Width="150" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="0,0,0,10" Height="32" VerticalAlignment="Bottom">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>

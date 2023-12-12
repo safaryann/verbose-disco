@@ -29,9 +29,18 @@ namespace Enternet_Shop.Infrastructure
         public string Patronymic { get; set; }
 
         [Column("date of birth")]
-        public long date_of_birth { get; set; }
+        public string date_of_birth { get; set; }
+        [Required]
+        [StringLength(2147483647)]
+        public string Password { get; set; }
+
+        [Required]
+        [StringLength(2147483647)]
+        public string Login { get; set; }
+        public long PostId { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderEntity> order { get; set; }
+        public virtual PostEntity post { get; set; }
     }
 }

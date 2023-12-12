@@ -20,6 +20,7 @@ namespace Enternet_Shop.Pages
     /// </summary>
     public partial class SalePage : Page
     {
+
         public SalePage()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace Enternet_Shop.Pages
 
         private void ApplyButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Промокод применен ^_~");
         }
 
         private void InMenuButton_Click(object sender, RoutedEventArgs e)

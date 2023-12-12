@@ -9,7 +9,7 @@ namespace Enternet_Shop.Infrastructure
     [Table("[Internet.shop]")]
     public partial class InternetShopEntity
     {
-        public long id { get; set; }
+        public long ID { get; set; }
 
         [Required]
         [StringLength(2147483647)]

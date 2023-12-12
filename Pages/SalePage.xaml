@@ -8,8 +8,8 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SalePage" Loaded="Page_Loaded">
     <Grid>
-        <ComboBox Margin="0,190,0,0" x:Name="SalesComboBox" HorizontalAlignment="Center" Width="380" Height="35" VerticalAlignment="Top" FontFamily="Arial" FontSize="14"/>
-        <Button x:Name="ApplyButton" Click="ApplyButton_Click" Content="Применить"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="30" Width="150" Margin="50,251,45,169">
+        <TextBox Margin="210,190,210,0" x:Name="SalesComboBox" FontFamily="Arial" FontSize="14" Height="35" VerticalAlignment="Top"/>
+        <Button x:Name="ApplyButton" Click="ApplyButton_Click" Content="Применить"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="328,251,322,0" Height="32" VerticalAlignment="Top">
             <Button.Resources>
                 <Style TargetType="{x:Type Border}">
                     <Setter Property="CornerRadius" Value="10"/>

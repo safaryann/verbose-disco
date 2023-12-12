@@ -8,7 +8,7 @@ namespace Enternet_Shop.Infrastructure
     public partial class Context : DbContext
     {
         public Context()
-            : base("name=Context")
+            : base("name=context")
         {
         }
 
@@ -36,12 +36,6 @@ namespace Enternet_Shop.Infrastructure
                 .HasMany(e => e.delivery)
                 .WithRequired(e => e.order)
                 .HasForeignKey(e => e.ID_order)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<ProductCategoryEntity>()
-                .HasMany(e => e.product)
-                .WithRequired(e => e.product_category)
-                .HasForeignKey(e => e.Caterory_ID)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<StatusEntity>()

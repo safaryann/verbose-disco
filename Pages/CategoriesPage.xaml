@@ -9,37 +9,37 @@
       Title="Categories">
 
     <Grid>
-        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" />
+        <Button x:Name="InMenuButton" Click="InMenuButton_Click" VerticalAlignment="Top" HorizontalAlignment="Right" Content="Главное меню" Width="150" Height="45" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" />
         <StackPanel HorizontalAlignment="Left" Width="800">
-            <Button x:Name="ClothesButton" Click="ClothesButton_Click" Content="Одежда"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150" Margin="0,50,0,10">
+            <Button x:Name="ClothesButton" Click="ClothesButton_Click" Content="Одежда" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150" Margin="0,50,0,10">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="AlcoholButton" Click="AlcoholButton_Click" Content="Алкоголь"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150"  Margin="0,20,0,0">
+            <Button x:Name="AlcoholButton" Click="AlcoholButton_Click" Content="Алкоголь" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150"  Margin="0,20,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="ProductsButton" Click="ProductsButton_Click" Content="Продукты"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150" Margin="0,20,0,0">
+            <Button x:Name="ProductsButton" Click="ProductsButton_Click" Content="Продукты" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="50" Width="150" Margin="0,20,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="DecoratingButton" Click="DecoratingButton_Click" Content="Украшения"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="50" Width="150" Margin="0,30,0,0">
+            <Button x:Name="DecoratingButton" Click="DecoratingButton_Click" Content="Украшения" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="50" Width="150" Margin="0,30,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="AccessoriesButton" Click="AccessoriesButton_Click" Content="Аксессуары"  Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="50" Width="150" Margin="0,20,0,0">
+            <Button x:Name="AccessoriesButton" Click="AccessoriesButton_Click" Content="Аксессуары" Background="CornflowerBlue" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="50" Width="150" Margin="0,20,0,0">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>

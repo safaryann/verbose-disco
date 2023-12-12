@@ -1,15 +1,16 @@
-﻿<Page x:Class="Enternet_Shop.Pages.ProductPage"
+﻿<Page
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Enternet_Shop.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="Enternet_Shop.Pages.ProductPage"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="800"
       Title="Товары">
 
     <Grid>
-        <StackPanel Margin="288,164,-288,-164">
+        <StackPanel Height="300" Width="160" Margin="0,182,40,0" VerticalAlignment="Top" HorizontalAlignment="Right" >
             <Button x:Name="SearchButton" Click="SearchButton_Click" Content="Найти" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial"  Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
@@ -17,7 +18,7 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="UploadButton" Click="UploadButton_Click" Content="Выгрузить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="AddButton" Click="AddButton_Click" Content="Добавить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -31,14 +32,21 @@
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="SaveButton" Click="SaveButton_Click" Content="Сохранить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+            <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="Удалить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
                     </Style>
                 </Button.Resources>
             </Button>
-            <Button x:Name="DeleteButton" Click="DeleteButton_Click" Content="Удалить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150">
+            <Button x:Name="InCartButton" Click="InCartButton_Click" Content="В корзину" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="150" Margin="0,0,0,15">
+                <Button.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+            <Button x:Name="GenerateQRCodeButton" Click="GenerateQRCodeButton_Click" Content="QR" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Height="30" Width="60" Margin="5,0,0,15" HorizontalAlignment="Left">
                 <Button.Resources>
                     <Style TargetType="{x:Type Border}">
                         <Setter Property="CornerRadius" Value="10"/>
@@ -53,6 +61,21 @@
                 </Style>
             </Button.Resources>
         </Button>
-        <TextBox Margin="47,164,0,0" HorizontalAlignment="Left" Width="500" Height="35" VerticalAlignment="Top" FontSize="20" />
+        <TextBox x:Name="SearchTextBox" Margin="47,164,253,0" FontSize="20" Height="35" VerticalAlignment="Top" Background="#00000000" BorderBrush="#89000000" />
+        <DataGrid x:Name="ProductsDataGrid" Margin="47,224,253,96" AutoGenerateColumns="False" MouseDoubleClick="ProductsDataGrid_MouseDoubleClick" CanUserSortColumns="True">
+            <DataGrid.Columns>
+                <materialDesign:DataGridTextColumn Binding="{Binding ID}" CanUserReorder="False" Header="ProductID" Visibility="Hidden" IsReadOnly="True"/>
+                <materialDesign:DataGridTextColumn Binding="{Binding Name}" CanUserReorder="False" Header="Название" IsReadOnly="True"/>
+                <materialDesign:DataGridTextColumn Binding="{Binding Cost}" CanUserReorder="False" Header="Стоимость" IsReadOnly="True"/>
+                <materialDesign:DataGridTextColumn Binding="{Binding Quanity}" CanUserReorder="False" Header="Количество" IsReadOnly="True"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button x:Name="UploadButton" Click="UploadButton_Click" Content="Выгрузить" Background="#FF698AFF" FontWeight="Black" FontSize="14"  FontFamily="Arial" Margin="0,70,5,0" Height="45" VerticalAlignment="Top" HorizontalAlignment="Right" Width="150">
+            <Button.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Page>

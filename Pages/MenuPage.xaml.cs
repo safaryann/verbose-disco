@@ -14,6 +14,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Enternet_Shop.Pages;
+using Enternet_Shop;
+using Enternet_Shop.Infrastructure.Consts;
 
 namespace Enternet_Shop.Pages
 {
@@ -22,16 +24,31 @@ namespace Enternet_Shop.Pages
     /// </summary>
     public partial class MenuPage : Page
     {
+
         public MenuPage()
         {
             InitializeComponent();
+            GrantAccessByRole();
+
+            DataContext = this;
+
+            UserNameTextBlock.Text = Application.Current.Resources[UserInfoConsts.UserName].ToString();
+            PostTextBlock.Text = Application.Current.Resources[UserInfoConsts.Post].ToString();
+            UserIdTextBlock.Text = Application.Current.Resources[UserInfoConsts.UserId].ToString();
+            PostIdTextBlock.Text = Application.Current.Resources[UserInfoConsts.PostId].ToString();
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
         {
+            Application.Current.Resources[UserInfoConsts.UserId] = null;
+            Application.Current.Resources[UserInfoConsts.UserName] = null;
+            Application.Current.Resources[UserInfoConsts.PostId] = null;
+            Application.Current.Resources[UserInfoConsts.Post] = null;
+
             AuthWindow authWindow = new AuthWindow();
             authWindow.Show();
-            Window.GetWindow(this).Close();
+            MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
+            mainWindow.Close();
         }
 
         private void ProductButton_Click(object sender, RoutedEventArgs e)
@@ -50,14 +67,6 @@ namespace Enternet_Shop.Pages
             mainWindow.MainFrame.Navigate(salePage);
         }
 
-        private void CategoriesButton_Click(object sender, RoutedEventArgs e)
-        {
-            Categories categoriesPage = new Categories();
-            MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
-            mainWindow.Title = categoriesPage.Title;
-            mainWindow.MainFrame.Navigate(categoriesPage);
-        }
-
         private void DeliveryButton_Click(object sender, RoutedEventArgs e)
         {
             DeliveryPage deliveryPage = new DeliveryPage();
@@ -72,6 +81,18 @@ namespace Enternet_Shop.Pages
             MainWindow mainWindow = (MainWindow)Window.GetWindow(this);
             mainWindow.Title = shoppingCartPage.Title;
             mainWindow.MainFrame.Navigate(shoppingCartPage);
+        }
+        private void GrantAccessByRole()
+        {
+            if (Application.Current.Resources.Contains(UserInfoConsts.PostId))
+            {
+                int postId = Convert.ToInt32(Application.Current.Resources[UserInfoConsts.PostId]);
+
+                if (postId == 0) //Роль гостя
+                {
+                    ShoppingCartButton.IsEnabled = false;
+                }
+            }
         }
     }
 }

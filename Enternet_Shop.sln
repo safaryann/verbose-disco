@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enternet_Shop", "Enternet_Shop.csproj", "{90B2B0D8-7F46-4543-A942-4F65540AC2F3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{40F93F2A-C791-42CA-BF62-1A84FE3F35D1} = {40F93F2A-C791-42CA-BF62-1A84FE3F35D1}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enternet_Shop.Infrastructure", "Enternet_Shop.Infrastructure\Enternet_Shop.Infrastructure.csproj", "{40F93F2A-C791-42CA-BF62-1A84FE3F35D1}"
 EndProject

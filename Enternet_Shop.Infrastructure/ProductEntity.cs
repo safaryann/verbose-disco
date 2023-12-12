@@ -19,9 +19,5 @@ namespace Enternet_Shop.Infrastructure
 
         public long Quanity { get; set; }
 
-        [Column("Caterory ID")]
-        public long Caterory_ID { get; set; }
-
-        public virtual ProductCategoryEntity product_category { get; set; }
     }
 }
